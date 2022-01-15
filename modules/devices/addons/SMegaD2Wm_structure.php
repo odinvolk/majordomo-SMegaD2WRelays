@@ -4,6 +4,7 @@ $this->device_types['megad2wm_relay'] = array(
         'TITLE'=>'Реле MegaD2Wm',
         'PARENT_CLASS'=>'SControllers',
         'CLASS'=>'SMegaD2WmRelays',
+        'DESCRIPTION'=>'Реле 2W',
         'PROPERTIES'=>array(
             'ipAddress'=>array('DESCRIPTION'=>'IP адрес MegaD устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'Password'=>array('DESCRIPTION'=>'Пароль MegaD устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
@@ -13,21 +14,7 @@ $this->device_types['megad2wm_relay'] = array(
             'status'=>array('DESCRIPTION'=>'Состояние канал MegaD2W','ONCHANGE'=>'statusUpdated', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'timeout'=>array('DESCRIPTION'=>'Время отключения канала (мин.)', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'stored_value'=>array('DESCRIPTION'=>'История канала', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
-            'groupEco'=>array('DESCRIPTION'=>LANG_DEVICES_GROUP_ECO,'_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdGroupEco'),
-            'groupEcoOn'=>array('DESCRIPTION'=>LANG_DEVICES_GROUP_ECO_ON,'_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdGroupEcoOn'),
-            'groupSunrise'=>array('DESCRIPTION'=>LANG_DEVICES_GROUP_SUNRISE,'_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdGroupSunrise'),
-            'groupSunset'=>array('DESCRIPTION'=>LANG_DEVICES_GROUP_SUNSET,'_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdGroupSunset'),
-            'isActivity'=>array('DESCRIPTION'=>LANG_DEVICES_IS_ACTIVITY,'_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdIsActivity'),
             'autoMode'=>array('DESCRIPTION'=>'Авто отключение канала','_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdautoMode'),
-            'loadType'=>array('DESCRIPTION'=>LANG_DEVICES_LOADTYPE,
-                '_CONFIG_TYPE'=>'select','_CONFIG_HELP'=>'SdLoadType',
-                '_CONFIG_OPTIONS'=>'light='.LANG_DEVICES_LOADTYPE_LIGHT.
-                    ',heating='.LANG_DEVICES_LOADTYPE_HEATING.
-                    ',vent='.LANG_DEVICES_LOADTYPE_VENT.
-                    ',curtains='.LANG_DEVICES_LOADTYPE_CURTAINS.
-                    ',gates='.LANG_DEVICES_LOADTYPE_GATES.
-                    ',power='.LANG_DEVICES_LOADTYPE_POWER),
-            'icon'=>array('DESCRIPTION'=>LANG_IMAGE,'_CONFIG_TYPE'=>'style_image','_CONFIG_HELP'=>'SdIcon'),
         ),
         'METHODS'=>array(
             'turnOn'=>array('DESCRIPTION'=>LANG_DEVICES_TURN_ON,'_CONFIG_SHOW'=>1),
