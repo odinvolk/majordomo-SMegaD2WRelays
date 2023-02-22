@@ -2,6 +2,8 @@
 
 Простое устройство Расширитель MegaD2W для Majordomo
 
+Управляет каждым каналом индивидуально
+
 Модуль добавляет в "Простые устройства" Majordomo поддержку Расширителя MegaD2W и MegaD-2RW https://www.ab-log.ru/smart-house/ethernet/megad-2w
 
 Исполнительный блок MegaD-2W и MegaD-2RW для контроллеров MegaD-2561/328
