@@ -1,6 +1,4 @@
 <?php
-$this->setProperty('status', 1);
-
 $ot = $this->object_title;
 $blocked_timeout = $ot.'_lightOffTimer';
 $timeout = $this->getProperty('timeout'); //60 * 15; 15 мин timeout
@@ -15,6 +13,7 @@ $Address = $this->getProperty('bAddress');
 if ($this->getProperty('autoMode') == 1) {
     clearTimeOut($blocked_timeout);
     setTimeOut($blocked_timeout,'cm("'.$ot.'.turnOff");',60 * $timeout);
+	$this->setProperty('status', 1);
 } else {
     $this->setProperty('status', 1);
 }

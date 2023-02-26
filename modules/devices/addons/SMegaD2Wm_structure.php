@@ -4,7 +4,7 @@ $this->device_types['megad2wm_relay'] = array(
         'TITLE'=>'Реле MegaD2Wm',
         'PARENT_CLASS'=>'SControllers',
         'CLASS'=>'SMegaD2WmRelays',
-        'DESCRIPTION'=>'Реле 2W',
+        'DESCRIPTION'=>'Диммер расширенный',
         'PROPERTIES'=>array(
             'ipAddress'=>array('DESCRIPTION'=>'IP адрес MegaD устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'Password'=>array('DESCRIPTION'=>'Пароль MegaD устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
@@ -15,7 +15,10 @@ $this->device_types['megad2wm_relay'] = array(
             'timeout'=>array('DESCRIPTION'=>'Время отключения канала (мин.)', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'stored_value'=>array('DESCRIPTION'=>'История канала', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'autoMode'=>array('DESCRIPTION'=>'Авто отключение канала','_CONFIG_TYPE'=>'yesno','_CONFIG_HELP'=>'SdautoMode'),
-        ),
+            'mqtt_status'=>array('DESCRIPTION'=>'Транслировать в MQTT','_CONFIG_TYPE'=>'yesno'),
+            'telegram_status'=>array('DESCRIPTION'=>'Транслировать в Telegram','_CONFIG_TYPE'=>'yesno'),
+            'registerEvent_status'=>array('DESCRIPTION'=>'Транслировать в События','_CONFIG_TYPE'=>'yesno'),
+            ),
         'METHODS'=>array(
             'turnOn'=>array('DESCRIPTION'=>LANG_DEVICES_TURN_ON,'_CONFIG_SHOW'=>1),
             'turnOnAuto'=>array('DESCRIPTION'=>'Включить на время','_CONFIG_SHOW'=>1),
